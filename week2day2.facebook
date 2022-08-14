@@ -1,0 +1,43 @@
+package week2.day2;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Facebook {
+
+	public static void main(String[] args) {
+		//https://en-gb.facebook.com/
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("https://en-gb.facebook.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		driver.findElement(By.xpath("(//a[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy'])")).click();
+		driver.findElement(By.xpath("(//input[@name='firstname'])")).sendKeys("Mukesh");
+		driver.findElement(By.xpath("(//input[@name='lastname'])")).sendKeys("Mukeshkannan");	
+		driver.findElement(By.xpath("(//input[@aria-label='Mobile number or email address'])")).sendKeys("8122851695");
+		driver.findElement(By.xpath("(//input[@name='reg_passwd__'])")).sendKeys("7010001649@MMk");
+		WebElement name=driver.findElement(By.id("day"));
+        Select opt=new Select(name);
+        opt.selectByIndex(26);
+        
+        WebElement select=driver.findElement(By.id("month"));
+        Select opti=new Select(select);
+        opti.selectByIndex(8);
+          	
+	    driver.findElement(By.xpath("(//select[@class='_9407 _5dba _9hk6 _8esg']/following::option[\"1995\"])[40]")).click();
+	    driver.findElement(By.xpath("(//label[@class='_58mt'])[2]")).click();
+	    driver.findElement(By.xpath("//div[@class='_1lch']")).click();
+	    
+	    
+	    
+	}
+	
+
+}
