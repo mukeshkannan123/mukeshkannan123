@@ -1,0 +1,40 @@
+package week4day2;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LearnFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("https://leafground.com/frame.xhtml");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
+		//To handle the frame
+		driver.switchTo().frame(0);
+		//(//iframe)[2]
+		
+		//click element
+		WebElement firstFrame=driver.findElement(By.id("Click"));
+		firstFrame.click();
+		String text1=firstFrame.getText();
+		System.out.println(text1);
+		
+		//To handle the frame
+		driver.switchTo().frame("(//iframe)[2]");
+		WebElement nestedframe=driver.findElement(By.id("Click"));
+		nestedframe.click();
+		String nestedFrame=nestedframe.getText();
+		System.out.println(nestedFrame);
+		driver.switchTo().defaultContent();
+		
+	}
+
+}
