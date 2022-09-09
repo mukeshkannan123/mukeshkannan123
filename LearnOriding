@@ -1,0 +1,19 @@
+package week3.day1Polymorphism;
+//child
+public class LearnOriding extends Overridingparent {
+
+	public void MyHouse() {
+		super.MyHouse();
+		System.out.println("child house");
+	}	
+	public void familyName(String name) {	
+		System.out.println(name);}
+
+	public static void main(String[] args) {
+		LearnOriding Overriding1=new LearnOriding();
+		Overriding1.familyName("sigh");
+		Overriding1.MyHouse();
+
+	}
+
+}
