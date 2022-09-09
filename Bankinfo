@@ -1,0 +1,16 @@
+package week3.day1Polymorphism;
+
+public class Bankinfo {
+       public void add(int a,int b,int d) {
+    	   int c=a+b+d;
+    	System.out.println("method with 3 int args:"+c);   
+       }
+		
+
+
+public static void main(String[] args) {
+	Bankinfo bi=new Bankinfo();
+	bi.add(2, 8, 10);
+    
+}
+}
