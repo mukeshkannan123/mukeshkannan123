@@ -1,0 +1,31 @@
+package week3.day2;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Listed2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Set<Integer> values=new HashSet<Integer>(); //Linkedhashset
+		values.add(4);
+		values.add(5);
+		values.add(4);
+		values.add(6);
+		System.out.println(values);
+Set<String> names=new TreeSet<String>();
+names.add("mukesh");
+names.add("kannan");
+	
+	System.out.println(names);
+	
+	for(String string : names) {
+	
+	System.out.println(string);
+	}
+names.clear();
+System.out.println(names);
+}
+}
