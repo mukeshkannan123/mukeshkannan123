@@ -1,0 +1,48 @@
+package week3.day2;
+
+public class IndiduvalBuyer extends Appartment implements Land ,Goverment {
+
+        static int x=15;
+
+	public void landtobuy() {
+		// TODO Auto-generated method stub
+
+		System.out.println("My Indiduval method");	
+	}
+
+	public void malls() {
+		// TODO Auto-generated method stub
+		System.out.println("plot to build mall");
+	}
+
+
+
+	public void RegisterationAmmount() {
+		System.out.println("2Lakhs");
+
+	}
+
+	public void commonArea() {
+		System.out.println("Park");	
+
+
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IndiduvalBuyer house=new IndiduvalBuyer();
+		house.malls();
+		house.landtobuy();
+		house.commonArea();
+		house.terrace();
+		house.RegisterationAmmount();
+		System.out.println(s);
+		System.out.println(x);
+	}
+
+	public void terrace() {
+		System.out.println("Dangerous");
+
+	}
+}
+
+
