@@ -1,0 +1,28 @@
+package week5day1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Assignment1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//	1. Launch the URL https://www.chittorgarh.com/
+		//	2. Click on stock market
+		//  3. Click on NSE bulk Deals
+		//	4. Get all the Security names
+		//	5. Ensure whether there are duplicate Security names
+       WebDriverManager.chromedriver().setup();
+       ChromeDriver driver=new ChromeDriver();
+       driver.get("https://www.chittorgarh.com/");
+       driver.manage().window().maximize();
+       driver.findElement(By.xpath("(//i[@class='fa fa-caret-down'])[3]")).click();
+       driver.findElement(By.linkText("NSE Bulk Deals")).click();
+       String securityName = driver.findElement(By.xpath("(//table[contains(@class,'table table-bordered')]//a)[3]")).getText();
+       System.out.println(securityName);
+
+	}
+
+}
