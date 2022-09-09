@@ -1,0 +1,30 @@
+package week4day1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AssignmentRedBus {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("https://redbus.in/");
+		driver.manage().window().maximize();
+		
+		 WebElement from = driver.findElement(By.id("//input[@data-message='Please enter a source city']']"));
+	        from.click();
+	        from.sendKeys("Madiwala",Keys.ENTER);
+		WebElement to=driver.findElement(By.id("//input[@data-message='Please enter a destination city']"));
+		from.click();
+        from.sendKeys("Koyambedu Chennai",Keys.ENTER);
+	
+	
+	
+	}
+
+}
