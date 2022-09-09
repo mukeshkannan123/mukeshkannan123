@@ -1,0 +1,42 @@
+package week3.day2;
+
+public class Owner extends Iphone implements Mobile  {
+
+	static int z=15;
+	public void BuyMobile() {
+		// TODO Auto-generated method stub
+	System.out.println("Online");	
+	}
+
+	public void MobileBrand() {
+		// TODO Auto-generated method stub
+		System.out.println("Iphone");
+	}
+
+	public void SellMobile() {
+		// TODO Auto-generated method stub
+		System.out.println("old used mobile 20000");
+	}
+
+	public void Makecall() {
+		// TODO Auto-generated method stub
+		System.out.println("friend 12345");
+	}
+
+	public void SendMessage() {
+		// TODO Auto-generated method stub
+		System.out.println("Hii");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Owner Ow=new Owner();
+		Ow.BuyMobile();
+		Ow.Makecall();
+		Ow.MobileBrand();
+		Ow.SellMobile();
+		System.out.println(z);
+		
+		
+}
+}
