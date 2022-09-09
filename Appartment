@@ -1,0 +1,16 @@
+package week3.day2;
+
+public abstract class Appartment {
+	//Abstarct class unimplemnted
+	//not create object abstarct
+	public void flats() {
+		System.out.println("Constructed Series of flats");
+	}
+	public abstract void terrace();       
+
+	public void park() {
+		
+		System.out.println("common all flats");
+	}
+}
+//create new class myflats
