@@ -1,0 +1,29 @@
+package week3.day1Polymorphism;
+
+public class LearnCompalTime {
+
+	public void employee(int id) {
+		System.out.println("EmpId:"+id);	
+	}
+	public void employee(String empname,String companyName) {
+		System.out.println("empname:"+empname+"companyname");
+	}
+	public void employee(float salary) {
+		System.out.println("emp salary:"+salary);	
+	}
+	public void employee(String allowance) {
+		System.out.println("Type of Allownce:"+allowance);
+	}
+
+	public static void main(String[] args) {
+
+	
+	LearnCompalTime overload=new LearnCompalTime();
+
+	overload.employee(121);
+	overload.employee(12333.2f);
+	overload.employee("food allowance");
+
+	}
+
+}
