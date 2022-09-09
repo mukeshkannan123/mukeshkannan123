@@ -1,0 +1,15 @@
+package week3.day2;
+
+public interface Mobile  {
+
+
+public void BuyMobile();
+
+public void MobileBrand();
+
+public void SellMobile();
+
+public void Makecall();
+
+public void SendMessage();
+}
